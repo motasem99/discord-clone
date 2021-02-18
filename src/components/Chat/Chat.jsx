@@ -1,5 +1,6 @@
 import React from 'react';
 import './Chat.css';
+import Message from './Message/Message';
 
 import ChatHeader from './ChatHeader/ChatHeader';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
@@ -12,7 +13,11 @@ const Chat = () => {
     <div className='chat'>
       <ChatHeader />
 
-      <div className='chat__messages'></div>
+      <div className='chat__messages'>
+        <Message />
+        <Message />
+        <Message />
+      </div>
 
       <div className='chat__input'>
         <AddCircleIcon fontSize='large' />
