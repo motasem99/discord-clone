@@ -6,6 +6,10 @@ import AddIcon from '@material-ui/icons/Add';
 import SignalCellularAltIcon from '@material-ui/icons/SignalCellularAlt';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 import CallIcon from '@material-ui/icons/Call';
+import { Avatar } from '@material-ui/core';
+import MicIcon from '@material-ui/icons/Mic';
+import HeadsetIcon from '@material-ui/icons/Headset';
+import SettingsIcon from '@material-ui/icons/Settings';
 
 const Sidebar = () => {
   return (
@@ -30,7 +34,10 @@ const Sidebar = () => {
         </div>
       </div>
       <div className='sidebar__voice'>
-        <SignalCellularAltIcon className='voiceIcon' fontSize='large' />
+        <SignalCellularAltIcon
+          className='sidebar__voiceIcon'
+          fontSize='large'
+        />
         <div className='sidebar__voiceInfo'>
           <h3>Voice Connected</h3>
           <p>Stream</p>
@@ -38,6 +45,18 @@ const Sidebar = () => {
         <div className='sidebar__voiceIcons'>
           <InfoOutlinedIcon />
           <CallIcon />
+        </div>
+      </div>
+      <div className='sidebar__profile'>
+        <Avatar src='https://avatars.githubusercontent.com/u/54185788?s=400&u=e300c4156729bf78a943366a69d3a1e750dbeae4&v=4' />
+        <div className='sidebar__profileInfo'>
+          <h3>@Mutasem</h3>
+          <p>#ThisIsMyID</p>
+        </div>
+        <div className='sidebar__profileIcons'>
+          <MicIcon />
+          <HeadsetIcon />
+          <SettingsIcon />
         </div>
       </div>
     </div>
