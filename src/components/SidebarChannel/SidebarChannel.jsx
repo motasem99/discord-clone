@@ -4,6 +4,7 @@ import { setChannelInfo } from '../../features/appSlice.js';
 import './SidebarChannel.css';
 
 const SidebarChannel = ({ id, channelName }) => {
+  console.log(id, channelName);
   const dispatch = useDispatch();
 
   return (
@@ -13,14 +14,14 @@ const SidebarChannel = ({ id, channelName }) => {
         dispatch(
           setChannelInfo({
             channelId: id,
-            channelName: id.channel.channelName,
+            channelName: channelName,
           })
         )
       }
     >
       <h4>
         <span className='sidebarChannel__hash'>#</span>
-        {id.channel.channelName}
+        {channelName}
       </h4>
     </div>
   );

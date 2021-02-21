@@ -29,6 +29,8 @@ const Sidebar = () => {
     );
   }, []);
 
+  console.log(channels);
+
   const handleAddChannel = () => {
     const channelName = prompt('Enter The Channel Name');
     if (channelName) {
@@ -53,7 +55,7 @@ const Sidebar = () => {
           <AddIcon onClick={handleAddChannel} className='sidebar__addChannel' />
         </div>
         <div className='sidebar__channelsList'>
-          {channels.map((id, channel) => (
+          {channels.map(({ id, channel }) => (
             <SidebarChannel
               key={id}
               id={id}
